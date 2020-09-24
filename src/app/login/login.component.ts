@@ -53,7 +53,8 @@ export class LoginComponent implements OnInit {
       // This gives you a Facebook Access Token. You can use it to access the Facebook API.
       // The signed-in user info.
       var user = result.user;
-      this.route.navigate(["Main"])
+      this.userservice.user = result.user.email;
+      this.route.navigate(["main"])
       console.log(user.email);
       // ...
     }.bind(this)).catch(function (error) {
