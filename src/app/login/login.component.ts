@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
       var user = result.user;
       console.log(user);
       this.userservice.user = result.user.email;
-      this.route.navigate(["Main"])
+      this.route.navigate(["main"])
 
       // ...
     }.bind(this)).catch(function (error) {
